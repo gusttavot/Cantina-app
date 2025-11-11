@@ -1,10 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+
 
 export default function App() {
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Usuário</Text>
+      <TextInput placeholder='Digite seu email'></TextInput>
+      <Text>Senha</Text>
+      <TextInput placeholder='Digite sua senha'></TextInput>
+      <Button title='Entrar'></Button>
       <StatusBar style="auto" />
     </View>
   );
